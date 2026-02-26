@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
     />
+    <base data-trunk-public-url />
     <title>WASM Convolution Explorer</title>
     <style>
       html,
@@ -24,9 +25,6 @@
   </head>
   <body>
     <canvas id="the_canvas_id"></canvas>
-    <script type="module">
-      import init from "./pkg/convolution_wasm.js";
-      init();
-    </script>
+    <link data-trunk rel="rust" data-bin="convolution_wasm" />
   </body>
 </html>
